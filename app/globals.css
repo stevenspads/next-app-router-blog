@@ -14,6 +14,29 @@
   @apply mt-0 rounded-t-none;
 }
 
+/* rehype-autolink-headings */
+
+.anchor {
+  @apply absolute invisible -ml-5 cursor-pointer w-5;
+}
+
+.anchor:hover {
+  @apply visible no-underline;
+}
+
+.anchor {
+  @apply no-underline
+}
+
+*:hover > .anchor {
+  @apply font-bold visible no-underline;
+}
+
+.anchor:after {
+  @apply text-gray-300 dark:text-gray-600;
+  content: '#';
+}
+
 /* 
 rehype-prism-plus styles
 from: https://www.npmjs.com/package/rehype-prism-plus

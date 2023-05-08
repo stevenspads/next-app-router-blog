@@ -5,7 +5,5 @@ interface Props {
 }
 
 export default function CardBody({ children }: Props) {
-  return (
-    <div className="p-5">{children}</div>
-  )
+  return <div className="p-5">{children}</div>;
 }

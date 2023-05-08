@@ -32,9 +32,9 @@ export default async function PostPage({ params }: PostProps) {
   return posts.map((post) => (
     <article key={post._id} className="mb-12">
       <Card>
-        {post.image && 
+        {post.image && (
           <CardImage src={post.image} alt={post.title} url={post.slug} />
-        }
+        )}
         <CardBody>
           <header>
             <Link href={post.slug} className="no-underline">

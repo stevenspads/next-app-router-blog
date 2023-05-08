@@ -7,8 +7,9 @@ Thanks to [@shadcn](https://github.com/shadcn) and his work on [next-contentlaye
 ## Features
 
 - Next.js App Router.
+- Contentlayer with MDX files for pages and posts.
 - Tailwind CSS for styling.
-- Themes: light and dark mode.
+- Light and dark mode.
 - Blog post categories.
 - Blog post featured images.
 - Estimated reading time for blog posts.

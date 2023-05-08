@@ -7,8 +7,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const title = "Next Dev Blog";
-const description = "A blog for devs built with Next.js, the App Router, TailwindCSS, and contentlayer";
+const description =
+  "A Next.js markdown blog for developers using the new App Router.";
 export const metadata = {
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL,
   title: {
     default: title,
     template: `%s | ${title}`,

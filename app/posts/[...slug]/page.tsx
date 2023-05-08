@@ -55,9 +55,9 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article className="py-6 prose dark:prose-invert">
-      {post.image &&
+      {post.image && (
         <div className="relative w-full h-[345px] mb-12">
-          <Image 
+          <Image
             className="rounded-lg w-full m-0 object-cover"
             src={post.image}
             alt={post.title}
@@ -66,7 +66,7 @@ export default async function PostPage({ params }: PostProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-      }
+      )}
 
       <header>
         <h1 className="mb-2">{post.title}</h1>

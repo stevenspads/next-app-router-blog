@@ -19,12 +19,8 @@ export default function CardImage({ src, alt, url }: Props) {
   let cardImage = image;
 
   if (url) {
-    cardImage = <Link href={url}>{image}</Link>
+    cardImage = <Link href={url}>{image}</Link>;
   }
-  
-  return (
-    <div className="relative w-full h-60">
-      {cardImage}
-    </div>
-  )
+
+  return <div className="relative w-full h-60">{cardImage}</div>;
 }
