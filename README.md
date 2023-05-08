@@ -7,12 +7,13 @@ Thanks to [@shadcn](https://github.com/shadcn) and his work on [next-contentlaye
 ## Features
 
 - Next.js App Router.
-- TailwindCSS.
-- Light and dark mode.
+- Tailwind CSS for styling.
+- Themes: light and dark mode.
 - Blog post categories.
-- Blog post images.
+- Blog post featured images.
 - Estimated reading time for blog posts.
-- Sharing of blog posts via Twitter.
+- Twitter share button for blog posts.
+- Code highlighting with Prism.
 - Automatic sitemap generation upon build.
 - Prettier code formatting.
 
