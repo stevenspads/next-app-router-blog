@@ -108,7 +108,7 @@ After this sort of list I usually have a closing statement or paragraph, because
 
 Here's what a default `tailwind.config.js` file looks like at the time of writing:
 
-```js:tailwind.config.js {1,3-4} showLineNumbers
+```js:tailwind.config.js
 module.exports = {
   purge: [],
   theme: {
@@ -119,7 +119,18 @@ module.exports = {
 };
 ```
 
-Hopefully that looks good to you.
+Hopefully that looks good to you. Now let's add some line numbers and highlight some lines.
+
+```js:tailwind.config.js {1,3-4} showLineNumbers
+module.exports = {
+  purge: [],
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+};
+```
 
 ### What about nested lists?
 

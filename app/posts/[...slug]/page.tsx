@@ -6,6 +6,7 @@ import { Mdx } from "@/components/mdx-components";
 import { SharePost } from "@/components/share-post";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
+import Image from "next/image";
 
 interface PostProps {
   params: {
@@ -54,6 +55,19 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article className="py-6 prose dark:prose-invert">
+      {post.image &&
+        <div className="relative w-full h-[345px] mb-12">
+          <Image 
+            className="rounded-lg w-full m-0 object-cover"
+            src={post.image}
+            alt={post.title}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+      }
+
       <header>
         <h1 className="mb-2">{post.title}</h1>
         {post.description && (
