@@ -6,10 +6,52 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const title = "Next Dev Blog";
+const description = "A blog for devs built with Next.js, the App Router, TailwindCSS, and contentlayer";
 export const metadata = {
-  title: "Next Dev Blog",
-  description:
-    "A dev blog with Next.js app router, TailwindCSS, and contentlayer",
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description,
+  keywords: [
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "TailwindCSS",
+    "contentlayer",
+    "App Router",
+  ],
+  authors: [
+    {
+      name: "stevenspads",
+      url: "https://github.com/stevenspads",
+    },
+  ],
+  creator: "stevenspads",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_SITE_URL,
+    title,
+    description,
+    siteName: title,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`],
+    creator: "@stevenspads",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 interface RootLayoutProps {
