@@ -13,7 +13,7 @@ export function Footer() {
         <div className="flex items-center justify-center">
           <a
             target="_blank"
-            href="https://twitter.com/stevenspads"
+            href="https://twitter.com/nextjs"
             rel="noopener noreferrer"
             aria-label="Twitter"
             className="px-4 text-gray-800 hover:text-blue-500"
