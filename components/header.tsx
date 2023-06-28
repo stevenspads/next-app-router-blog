@@ -1,14 +1,15 @@
-"use client";
+"use client"
 
-import { MenuIcon } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
-import { ThemeSwitcher } from "./theme-switcher";
+import { useState } from "react"
+import Link from "next/link"
+import { MenuIcon } from "lucide-react"
+
+import { ThemeSwitcher } from "./theme-switcher"
 
 export function Header() {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
 
-  const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
+  const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen)
 
   return (
     <nav className="mb-12">
@@ -52,5 +53,5 @@ export function Header() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

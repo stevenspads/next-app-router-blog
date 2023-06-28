@@ -1,14 +1,19 @@
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import "./globals.css";
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] });
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const title = "Next Dev Blog";
+import "./globals.css"
+import { cn } from "@/lib/utils"
+
+import { fontSans } from "../lib/fonts"
+
+const inter = Inter({ subsets: ["latin"] })
+
+const title = "Next Dev Blog"
 const description =
-  "A Next.js markdown blog for developers using the new App Router.";
+  "A Next.js markdown blog for developers using the new App Router."
 export const metadata = {
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL,
   title: {
@@ -54,10 +59,10 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-};
+}
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -69,11 +74,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 px-4">
             <Header />
-            <main>{children}</main>
+            <main
+              className={cn(
+                "min-h-screen bg-background font-sans antialiased",
+                fontSans.variable
+              )}
+            >
+              {children}
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

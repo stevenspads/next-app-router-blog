@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { TwitterIcon, TwitterShareButton } from "next-share";
+import { TwitterIcon, TwitterShareButton } from "next-share"
 
 type Props = {
-  title: string;
-  slug: string;
-};
+  title: string
+  slug: string
+}
 
 export function SharePost({ title, slug }: Props) {
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL}${slug}`;
-  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE;
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL}${slug}`
+  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
 
   return (
     <div className="flex items-center justify-center">
@@ -22,5 +22,5 @@ export function SharePost({ title, slug }: Props) {
         <TwitterIcon round size={48} />
       </TwitterShareButton>
     </div>
-  );
+  )
 }

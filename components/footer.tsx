@@ -1,5 +1,5 @@
-import { TwitterIcon } from "lucide-react";
-import Link from "next/link";
+import Link from "next/link"
+import { TwitterIcon } from "lucide-react"
 
 export function Footer() {
   return (
@@ -30,5 +30,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

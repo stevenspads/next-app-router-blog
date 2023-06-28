@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import { MoonIcon, SunIcon } from "lucide-react";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
+import { MoonIcon, SunIcon } from "lucide-react"
+import { useTheme } from "next-themes"
 
 export function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false);
-  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { setTheme, theme } = useTheme()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
-    return null;
+    return null
   }
 
   return (
@@ -28,5 +28,5 @@ export function ThemeSwitcher() {
         <MoonIcon className="h-4 w-4" />
       )}
     </button>
-  );
+  )
 }
