@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: undefined
+Host: https://localhost:3000
 
 # Sitemaps
-Sitemap: undefined/sitemap.xml
+Sitemap: https://localhost:3000/sitemap.xml

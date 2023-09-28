@@ -3,9 +3,9 @@ import { TwitterIcon } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="flex justify-center mt-24">
-      <div className="pt-16 space-y-12">
-        <nav className="text-sm font-medium text-center space-x-6">
+    <footer className="mt-24 flex justify-center">
+      <div className="space-y-12 pt-16">
+        <nav className="space-x-6 text-center text-sm font-medium">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
         </nav>
@@ -18,14 +18,14 @@ export function Footer() {
             aria-label="Twitter"
             className="px-4 text-gray-800 hover:text-blue-500"
           >
-            <TwitterIcon className="w-8 h-8 fill-current" />
+            <TwitterIcon className="h-8 w-8 fill-current" />
           </a>
         </div>
 
         <div className="text-center">
-          <p className="text-gray-500 text-sm">
-            &copy; <Link href="/">{process.env.NEXT_PUBLIC_SITENAME}</Link>. All
-            rights reserved.
+          <p className="text-sm text-gray-500">
+            &copy; <Link href="/">{process.env.NEXT_PUBLIC_SITE_NAME}</Link>.
+            All rights reserved.
           </p>
         </div>
       </div>

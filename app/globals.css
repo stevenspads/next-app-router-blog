@@ -115,7 +115,7 @@
 }
 
 .anchor {
-  @apply no-underline
+  @apply no-underline;
 }
 
 *:hover > .anchor {
@@ -124,7 +124,7 @@
 
 .anchor:after {
   @apply text-gray-300 dark:text-gray-600;
-  content: '#';
+  content: "#";
 }
 
 /* 
@@ -137,7 +137,7 @@ pre {
 }
 
 /* padding fix */
-pre[class*='language-'] {
+pre[class*="language-"] {
   padding: 1rem !important;
 }
 

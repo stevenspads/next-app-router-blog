@@ -20,10 +20,10 @@ export default function Home() {
         <article key={post._id} className="mb-12">
           <Card>
             {post.image && (
-              <div className="relative w-full h-60">
+              <div className="relative h-60 w-full">
                 <Link href={post.slug}>
                   <Image
-                    className="rounded-t-lg m-0 w-full object-cover"
+                    className="m-0 w-full rounded-t-lg object-cover"
                     src={post.image}
                     alt={post.title}
                     fill
@@ -58,10 +58,10 @@ export default function Home() {
             <CardFooter>
               <Link
                 href={post.slug}
-                className="inline-flex items-center px-3 py-2 text-sm space-x-2 no-underline font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="inline-flex items-center space-x-2 rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white no-underline hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 <span>Read more</span>
-                <ArrowRightIcon className="w-5 h-5" />
+                <ArrowRightIcon className="h-5 w-5" />
               </Link>
             </CardFooter>
           </Card>

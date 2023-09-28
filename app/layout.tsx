@@ -1,15 +1,10 @@
-import { Inter } from "next/font/google"
-
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import "./globals.css"
+import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-
-import { fontSans } from "../lib/fonts"
-
-const inter = Inter({ subsets: ["latin"] })
 
 const title = "Next Dev Blog"
 const description =
@@ -69,19 +64,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="max-w-2xl mx-auto py-10 px-4">
+          <div className="mx-auto max-w-2xl px-4 py-10">
             <Header />
-            <main
-              className={cn(
-                "min-h-screen bg-background font-sans antialiased",
-                fontSans.variable
-              )}
-            >
-              {children}
-            </main>
+            <main>{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

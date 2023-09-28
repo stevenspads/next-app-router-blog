@@ -13,24 +13,24 @@ export function Header() {
 
   return (
     <nav className="mb-12">
-      <div className="container mx-auto">
-        <div className="relative flex items-center justify-between h-16">
+      <div className="mx-auto">
+        <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               onClick={toggleMobileMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md p-2 text-black focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              <MenuIcon className="w-5 h-5" />
+              <MenuIcon className="h-5 w-5" />
             </button>
           </div>
-          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex-shrink-0 flex items-center">
+          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div className="flex shrink-0 items-center">
               <Link href="/" className="text-3xl font-black">
-                {process.env.NEXT_PUBLIC_SITENAME}
+                {process.env.NEXT_PUBLIC_SITE_NAME}
               </Link>
             </div>
             <div className="hidden sm:ml-12 sm:flex sm:items-center">
@@ -45,11 +45,20 @@ export function Header() {
       </div>
 
       <div
-        className={`sm:hidden ${isMobileOpen ? "block" : "hidden"}`}
+        className={`space-y-4 px-2 sm:hidden ${
+          isMobileOpen ? "block" : "hidden"
+        }`}
         id="mobile-menu"
       >
-        <div className="flex flex-col pt-2 pb-6 space-y-4 border-b border-gray-200 px-2">
-          <Link href="/jobs">Jobs</Link>
+        <div>
+          <Link href="/" onClick={toggleMobileMenu}>
+            Home
+          </Link>
+        </div>
+        <div>
+          <Link href="/about" onClick={toggleMobileMenu}>
+            About
+          </Link>
         </div>
       </div>
     </nav>
