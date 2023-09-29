@@ -54,7 +54,7 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="prose py-6 dark:prose-invert">
+    <article className="prose dark:prose-invert">
       {post.image && (
         <div className="relative mb-12 h-[345px] w-full">
           <Image
@@ -93,7 +93,9 @@ export default async function PostPage({ params }: PostProps) {
       </header>
       <hr className="my-6" />
       <Mdx code={post.body.code} />
-      <SharePost title={post.title} slug={post.slug} />
+      <div className="mt-12">
+        <SharePost title={post.title} slug={post.slug} />
+      </div>
     </article>
   )
 }
